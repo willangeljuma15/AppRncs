@@ -1,0 +1,7 @@
+{
+  "name": "rrcapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
