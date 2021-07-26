@@ -1,0 +1,6 @@
+{
+	"appId": "io.rrcapp.starter",
+	"appName": "rrcapp",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

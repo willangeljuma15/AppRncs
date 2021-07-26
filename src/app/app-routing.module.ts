@@ -8,9 +8,9 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'home/rncs',
     pathMatch: 'full'
-  },
+  }
 ];
 
 @NgModule({
