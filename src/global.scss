@@ -30,3 +30,32 @@
     font-weight: 700;
     color: var(--ion-color-dark);
 }
+
+.tab-selected {
+
+    ion-icon,
+    ion-label {
+        color: var(--ion-color-azul-oscuro) !important;
+    }
+}
+.action-sheet-container {
+    
+    .action-sheet-group {
+        ion-icon {
+            color: var(--ion-color-azul);
+        }
+    }
+}
+
+.action-btn-eiminar {
+    color: var(--ion-color-danger) !important;
+    ion-icon {
+        color: var(--ion-color-danger) !important;
+    }
+}
+
+.item-has-focus {
+    .label-floating {
+        color: var(--ion-color-azul) !important;
+    }
+}

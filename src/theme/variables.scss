@@ -74,6 +74,21 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  // MyColor
+  --ion-color-azul: #3C8DAD;
+  --ion-color-azul-rgb: 3,83,151;
+  --ion-color-azul-contrast: #ffffff;
+  --ion-color-azul-contrast-rgb: 255,255,255;
+  --ion-color-azul-shade: #3C8DAD;
+  --ion-color-azul-tint: #3C8DAD;
+
+  --ion-color-azul-oscuro: #125D98;
+  --ion-color-azul-oscuro-rgb: 0,30,108;
+  --ion-color-azul-oscuro-contrast: #ffffff;
+  --ion-color-azul-oscuro-contrast-rgb: 255,255,255;
+  --ion-color-azul-oscuro-shade: #125D98;
+  --ion-color-azul-oscuro-tint: #125D98; 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -233,4 +248,34 @@
 
     --ion-card-background: #1e1e1e;
   }
+}
+
+// Esqueleto
+
+// .ion-color-azul {
+//   --ion-color-base: var(--ion-color-azul) !important;
+//   --ion-color-base-rgb: var(--ion-color-azul-rgb) !important;
+//   --ion-color-contrast: var(--ion-color-azul-contrast) !important;
+//   --ion-color-contrast-rgb: var(--ion-color-azul-contrast-rgb) !important;
+//   --ion-color-shade: var(--ion-color-azul-shade) !important;
+//   --ion-color-tint: var(--ion-color-azul-tint) !important;
+// }
+
+
+.ion-color-azul {
+  --ion-color-base: var(--ion-color-azul) !important;
+  --ion-color-base-rgb: var(--ion-color-azul-rgb) !important;
+  --ion-color-contrast: var(--ion-color-azul-contrast) !important;
+  --ion-color-contrast-rgb: var(--ion-color-azul-contrast-rgb) !important;
+  --ion-color-shade: var(--ion-color-azul-shade) !important;
+  --ion-color-tint: var(--ion-color-azul-tint) !important;
+}
+
+ .ion-color-azul-oscuro {
+  --ion-color-base: var(--ion-color-azul-oscuro) !important;
+  --ion-color-base-rgb: var(--ion-color-azul-oscuro-rgb) !important;
+  --ion-color-contrast: var(--ion-color-azul-oscuro-contrast) !important;
+  --ion-color-contrast-rgb: var(--ion-color-azul-oscuro-contrast-rgb) !important;
+  --ion-color-shade: var(--ion-color-azul-oscuro-shade) !important;
+  --ion-color-tint: var(--ion-color-azul-oscuro-tint) !important;
 }

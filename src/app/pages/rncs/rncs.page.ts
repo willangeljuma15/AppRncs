@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 enum Regimen {
   NORMAL = "NORMAL",
@@ -34,9 +35,13 @@ export class RncsPage implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor(private menuController: MenuController) { }
 
   ngOnInit() {
+  }
+
+  onClick() {
+    this.menuController.open();
   }
 
 }

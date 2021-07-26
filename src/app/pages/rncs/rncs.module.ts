@@ -1,21 +1,27 @@
-import { NgModule } from '@angular/core';
+import { NgModule, } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
 
-import { RncsPageRoutingModule } from './rncs-routing.module';
+// Pages
 
+import { RncsPageRoutingModule } from './rncs-routing.module';
 import { RncsPage } from './rncs.page';
+
+
+// Components
+
 import { RncComponent } from './rnc/rnc.component';
 import { DetailComponent } from './detail/detail.component';
+
+// Modulo creados Mios
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
     IonicModule,
     RncsPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [RncsPage, RncComponent, DetailComponent]
 })

@@ -1,0 +1,39 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="azul">
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Create Rnc</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button [disabled]="!createForm.valid" (click)="onCreateRnc()">
+        <ion-icon slot="start" name="checkmark-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="createForm">
+
+    <ion-item>
+      <ion-label position="floating">Cedula o Rnc</ion-label>
+      <ion-input type="text" formControlName="cedulaORnc"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nombre Razon Social</ion-label>
+      <ion-input type="text" formControlName="nombreRazonSocial"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nombre Comercial</ion-label>
+      <ion-input type="text" formControlName="nombreComencial"></ion-input>
+    </ion-item>
+
+  </form>
+</ion-content>

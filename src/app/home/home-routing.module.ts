@@ -9,7 +9,7 @@ const routes: Routes = [
     children: [
       {
         path: 'rncs',
-        loadChildren: () => import('../pages/rncs/rncs.module').then(m => m.RncsPageModule)
+        loadChildren: () => import('../pages/rncs/rncs.module').then(m => m.RncsPageModule),
       },
 
       {
