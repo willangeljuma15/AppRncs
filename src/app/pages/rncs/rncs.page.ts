@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 
-enum Regimen {
+import { RncService } from './rnc.service'
+
+export enum Regimen {
   NORMAL = "NORMAL",
   CANCEL = "CANCEL"
 }
 
 export interface Rnc {
   cedulaORnc: string;
-  razonSocial: string;
+  nombreRazonSocial: string;
   nombreComercial: string;
   regimenDePago: Regimen;
 }
@@ -20,24 +22,25 @@ export interface Rnc {
 })
 export class RncsPage implements OnInit {
 
-  rncs: Rnc[] = [
-    {
-      cedulaORnc: "101043598",
-      razonSocial: "SCOTIABANK REPUBLICA DOMINICANA SA, BANCO MULTIPLE",
-      nombreComercial: "SCOTIABANK REPUBLICA DOMINICANA",
-      regimenDePago: Regimen.NORMAL
-    },
-    {
-      cedulaORnc: "097-002444-6",
-      razonSocial: "Willson Juma",
-      nombreComercial: "Willson Juma Alcantara",
-      regimenDePago: Regimen.NORMAL
-    }
-  ]
+  rncs: Rnc[] = [];
 
-  constructor(private menuController: MenuController) { }
+  constructor(
+      private menuController: MenuController,
+      private rncService: RncService
+    ) { }
 
   ngOnInit() {
+    this.rncs = this.rncService.obtenerRncs();
+    console.log('NgInit');
+
+    this.rncService.rncsObservador
+      .subscribe(rncs => {
+        this.rncs = rncs;
+      })
+  }
+
+  ionViewDidEnter() {
+    // this.rncs = this.rncService.obtenerRncs();
   }
 
   onClick() {
