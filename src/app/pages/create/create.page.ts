@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Regimen } from  '../rncs/rncs.page';
 import { RncService } from '../rncs/rnc.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create',
@@ -15,7 +16,8 @@ export class CreatePage implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private rncService: RncService
+    private rncService: RncService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -38,6 +40,7 @@ export class CreatePage implements OnInit {
     }
 
     this.rncService.create(newRnc);
+    this.router.navigate(['/']);
   }
 
 }
